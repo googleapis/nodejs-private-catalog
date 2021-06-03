@@ -12,9 +12,6 @@
   "scripts": {
     "test": "c8 mocha --timeout 600000 test/*.js"
   },
-  "dependencies": {
-    "": "^0.1.0"
-  },
   "devDependencies": {
     "c8": "^7.1.0",
     "chai": "^4.2.0",
