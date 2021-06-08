@@ -61,6 +61,7 @@ npm install @google-cloud/private-catalog
 // Imports the Google Cloud client library
 
 // remove this line after package is released
+// eslint-disable-next-line node/no-missing-require
 const {PrivateCatalogClient} = require('@google-cloud/private-catalog');
 
 // TODO(developer): replace with your prefered project ID.
@@ -76,6 +77,7 @@ async function searchCatalogs() {
   console.info(catalogues);
 }
 searchCatalogs();
+
 ```
 
 
