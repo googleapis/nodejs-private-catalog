@@ -61,7 +61,6 @@ npm install @google-cloud/private-catalog
 // Imports the Google Cloud client library
 
 // remove this line after package is released
-// eslint-disable-next-line node/no-missing-require
 const {PrivateCatalogClient} = require('@google-cloud/private-catalog');
 
 // TODO(developer): replace with your prefered project ID.
@@ -70,7 +69,6 @@ const {PrivateCatalogClient} = require('@google-cloud/private-catalog');
 // Creates a client
 const client = new PrivateCatalogClient();
 
-//TODO(library generator): write the actual function you will be testing
 async function searchCatalogs() {
   const catalogues = await client.searchCatalogs({
     resource: `projects/${projectId}`,
@@ -78,7 +76,6 @@ async function searchCatalogs() {
   console.info(catalogues);
 }
 searchCatalogs();
-
 ```
 
 

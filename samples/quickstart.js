@@ -27,7 +27,6 @@ async function main(projectId) {
   // Creates a client
   const client = new PrivateCatalogClient();
 
-  //TODO(library generator): write the actual function you will be testing
   async function searchCatalogs() {
     const catalogues = await client.searchCatalogs({
       resource: `projects/${projectId}`,
