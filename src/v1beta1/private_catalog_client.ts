@@ -417,6 +417,10 @@ export class PrivateCatalogClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1beta1/private_catalog.search_catalogs.js</caption>
+   * region_tag:privatecatalog_search_catalogs_sample
+   *
    */
   searchCatalogs(
     request?: protos.google.cloud.privatecatalog.v1beta1.ISearchCatalogsRequest,
@@ -492,6 +496,10 @@ export class PrivateCatalogClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1beta1/private_catalog.search_catalogs.js</caption>
+   * region_tag:privatecatalog_search_catalogs_sample
+   *
    */
   searchCatalogsStream(
     request?: protos.google.cloud.privatecatalog.v1beta1.ISearchCatalogsRequest,
@@ -505,7 +513,8 @@ export class PrivateCatalogClient {
       gax.routingHeader.fromParams({
         resource: request.resource || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['searchCatalogs'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.searchCatalogs.createStream(
       this.innerApiCalls.searchCatalogs as gax.GaxCall,
@@ -550,6 +559,10 @@ export class PrivateCatalogClient {
    * for await (const response of iterable) {
    *   // process response
    * }
+   *
+   * @example <caption>include:samples/generated/v1beta1/private_catalog.search_catalogs.js</caption>
+   * region_tag:privatecatalog_search_catalogs_sample
+   *
    */
   searchCatalogsAsync(
     request?: protos.google.cloud.privatecatalog.v1beta1.ISearchCatalogsRequest,
@@ -564,7 +577,8 @@ export class PrivateCatalogClient {
         resource: request.resource || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['searchCatalogs'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.searchCatalogs.asyncIterate(
       this.innerApiCalls['searchCatalogs'] as GaxCall,
@@ -637,6 +651,10 @@ export class PrivateCatalogClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1beta1/private_catalog.search_products.js</caption>
+   * region_tag:privatecatalog_search_products_sample
+   *
    */
   searchProducts(
     request?: protos.google.cloud.privatecatalog.v1beta1.ISearchProductsRequest,
@@ -713,6 +731,10 @@ export class PrivateCatalogClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1beta1/private_catalog.search_products.js</caption>
+   * region_tag:privatecatalog_search_products_sample
+   *
    */
   searchProductsStream(
     request?: protos.google.cloud.privatecatalog.v1beta1.ISearchProductsRequest,
@@ -726,7 +748,8 @@ export class PrivateCatalogClient {
       gax.routingHeader.fromParams({
         resource: request.resource || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['searchProducts'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.searchProducts.createStream(
       this.innerApiCalls.searchProducts as gax.GaxCall,
@@ -772,6 +795,10 @@ export class PrivateCatalogClient {
    * for await (const response of iterable) {
    *   // process response
    * }
+   *
+   * @example <caption>include:samples/generated/v1beta1/private_catalog.search_products.js</caption>
+   * region_tag:privatecatalog_search_products_sample
+   *
    */
   searchProductsAsync(
     request?: protos.google.cloud.privatecatalog.v1beta1.ISearchProductsRequest,
@@ -786,7 +813,8 @@ export class PrivateCatalogClient {
         resource: request.resource || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['searchProducts'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.searchProducts.asyncIterate(
       this.innerApiCalls['searchProducts'] as GaxCall,
@@ -859,6 +887,10 @@ export class PrivateCatalogClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1beta1/private_catalog.search_versions.js</caption>
+   * region_tag:privatecatalog_search_versions_sample
+   *
    */
   searchVersions(
     request?: protos.google.cloud.privatecatalog.v1beta1.ISearchVersionsRequest,
@@ -935,6 +967,10 @@ export class PrivateCatalogClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1beta1/private_catalog.search_versions.js</caption>
+   * region_tag:privatecatalog_search_versions_sample
+   *
    */
   searchVersionsStream(
     request?: protos.google.cloud.privatecatalog.v1beta1.ISearchVersionsRequest,
@@ -948,7 +984,8 @@ export class PrivateCatalogClient {
       gax.routingHeader.fromParams({
         resource: request.resource || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['searchVersions'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.searchVersions.createStream(
       this.innerApiCalls.searchVersions as gax.GaxCall,
@@ -994,6 +1031,10 @@ export class PrivateCatalogClient {
    * for await (const response of iterable) {
    *   // process response
    * }
+   *
+   * @example <caption>include:samples/generated/v1beta1/private_catalog.search_versions.js</caption>
+   * region_tag:privatecatalog_search_versions_sample
+   *
    */
   searchVersionsAsync(
     request?: protos.google.cloud.privatecatalog.v1beta1.ISearchVersionsRequest,
@@ -1008,7 +1049,8 @@ export class PrivateCatalogClient {
         resource: request.resource || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['searchVersions'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.searchVersions.asyncIterate(
       this.innerApiCalls['searchVersions'] as GaxCall,

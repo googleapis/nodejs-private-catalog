@@ -12,24 +12,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(resource) {
-  // [START privatecatalog_search_catalogs_sample]
+function main(resource, query) {
+  // [START privatecatalog_search_versions_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The name of the resource context. It can be in following formats:
-   *  * `projects/{project}`
-   *  * `folders/{folder}`
-   *  * `organizations/{organization}`
+   *  Required. The name of the resource context. See [SearchCatalogsRequest.resource][google.cloud.privatecatalog.v1beta1.SearchCatalogsRequest.resource]
+   *  for details.
    */
   // const resource = 'abc123'
   /**
-   *  The query to filter the catalogs. The supported queries are:
-   *  * Get a single catalog: `name=catalogs/{catalog}`
+   *  Required. The query to filter the versions.
+   *  The supported queries are:
+   *  * List versions under a product:
+   *  `parent=catalogs/{catalog}/products/{product}`
+   *  * Get a version by name:
+   *  `name=catalogs/{catalog}/products/{product}/versions/{version}`
    */
   // const query = 'abc123'
   /**
@@ -37,32 +38,34 @@ function main(resource) {
    */
   // const pageSize = 1234
   /**
-   *  A pagination token returned from a previous call to SearchCatalogs that
-   *  indicates where this listing should continue from.
+   *  A pagination token returned from a previous call to SearchVersions
+   *  that indicates where this listing should continue from.
    */
   // const pageToken = 'abc123'
 
   // Imports the Privatecatalog library
-  const {PrivateCatalogClient} = require('@google-cloud/private-catalog').v1beta1;
+  const {PrivateCatalogClient} =
+    require('@google-cloud/private-catalog').v1beta1;
 
   // Instantiates a client
   const privatecatalogClient = new PrivateCatalogClient();
 
-  async function searchCatalogs() {
+  async function searchVersions() {
     // Construct request
     const request = {
       resource,
+      query,
     };
 
     // Run request
-    const iterable = await privatecatalogClient.searchCatalogsAsync(request);
+    const iterable = await privatecatalogClient.searchVersionsAsync(request);
     for await (const response of iterable) {
-        console.log(response);
+      console.log(response);
     }
   }
 
-  searchCatalogs();
-  // [END privatecatalog_search_catalogs_sample]
+  searchVersions();
+  // [END privatecatalog_search_versions_sample]
 }
 
 process.on('unhandledRejection', err => {
