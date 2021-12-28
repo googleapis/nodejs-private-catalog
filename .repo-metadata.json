@@ -12,5 +12,5 @@
   "default_version": "v1beta1",
   "requires_billing": true,
   "api_shortname": "cloudprivatecatalog",
-  "library_type": ""
+  "library_type": "GAPIC_AUTO"
 }
