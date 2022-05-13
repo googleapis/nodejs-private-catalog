@@ -92,21 +92,21 @@ export namespace google {
                 namespace PrivateCatalog {
 
                     /**
-                     * Callback as used by {@link google.cloud.privatecatalog.v1beta1.PrivateCatalog|searchCatalogs}.
+                     * Callback as used by {@link google.cloud.privatecatalog.v1beta1.PrivateCatalog#searchCatalogs}.
                      * @param error Error, if any
                      * @param [response] SearchCatalogsResponse
                      */
                     type SearchCatalogsCallback = (error: (Error|null), response?: google.cloud.privatecatalog.v1beta1.SearchCatalogsResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.privatecatalog.v1beta1.PrivateCatalog|searchProducts}.
+                     * Callback as used by {@link google.cloud.privatecatalog.v1beta1.PrivateCatalog#searchProducts}.
                      * @param error Error, if any
                      * @param [response] SearchProductsResponse
                      */
                     type SearchProductsCallback = (error: (Error|null), response?: google.cloud.privatecatalog.v1beta1.SearchProductsResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.privatecatalog.v1beta1.PrivateCatalog|searchVersions}.
+                     * Callback as used by {@link google.cloud.privatecatalog.v1beta1.PrivateCatalog#searchVersions}.
                      * @param error Error, if any
                      * @param [response] SearchVersionsResponse
                      */
@@ -4008,9 +4008,6 @@ export namespace google {
             /** FieldOptions lazy */
             lazy?: (boolean|null);
 
-            /** FieldOptions unverifiedLazy */
-            unverifiedLazy?: (boolean|null);
-
             /** FieldOptions deprecated */
             deprecated?: (boolean|null);
 
@@ -4047,9 +4044,6 @@ export namespace google {
 
             /** FieldOptions lazy. */
             public lazy: boolean;
-
-            /** FieldOptions unverifiedLazy. */
-            public unverifiedLazy: boolean;
 
             /** FieldOptions deprecated. */
             public deprecated: boolean;
@@ -6160,35 +6154,35 @@ export namespace google {
         namespace Operations {
 
             /**
-             * Callback as used by {@link google.longrunning.Operations|listOperations}.
+             * Callback as used by {@link google.longrunning.Operations#listOperations}.
              * @param error Error, if any
              * @param [response] ListOperationsResponse
              */
             type ListOperationsCallback = (error: (Error|null), response?: google.longrunning.ListOperationsResponse) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations|getOperation}.
+             * Callback as used by {@link google.longrunning.Operations#getOperation}.
              * @param error Error, if any
              * @param [response] Operation
              */
             type GetOperationCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations|deleteOperation}.
+             * Callback as used by {@link google.longrunning.Operations#deleteOperation}.
              * @param error Error, if any
              * @param [response] Empty
              */
             type DeleteOperationCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations|cancelOperation}.
+             * Callback as used by {@link google.longrunning.Operations#cancelOperation}.
              * @param error Error, if any
              * @param [response] Empty
              */
             type CancelOperationCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations|waitOperation}.
+             * Callback as used by {@link google.longrunning.Operations#waitOperation}.
              * @param error Error, if any
              * @param [response] Operation
              */
